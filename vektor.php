@@ -20,6 +20,7 @@ class vektor
     {
         $this->druhy=$a;
         echo $this->druhy;
+        $result='<div class="alert alert-success">Úspěšně vloženo</div>';
     }
     public function vypis()
     {

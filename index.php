@@ -2,10 +2,10 @@
 <?php
     require_once 'vektor.php';
 
-    $a=new vektor("0","0");
+    $a=new vektor(0,0);
     $b=new vektor(0,0);
 
-    $b->vypis();
+    //$b->vypis();
 ?>
 <html lang="cs">
     <head>
@@ -21,7 +21,6 @@
 </header>    
  
     <form class="form" method="post" action="index.php">
-        <div>
             <label for="A1" class="col-sm-5 control-label">BOD A1</label>
             <div class="col-md-7">
                 <input type="text" class="form-control" id="A1" name="A1" placeholder="A1" value=<?php if(isset($_POST["submit"]))$a->prvni($_POST['A1'])?>>
@@ -41,11 +40,10 @@
             <div class="col-md-7 col-sm-offset-5">
                     <input id="submit" name="submit" type="submit" value="Odeslat" class="btn btn-primary">
             </div>
-    </div>
     </form>
         
     <?php
-    echo $_POST['A1'];
+    //echo $_POST['A1'];
     $a->vypis();
     $b->vypis();
     ?>
