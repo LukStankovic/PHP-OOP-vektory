@@ -2,8 +2,8 @@
 //echo "<p>class</p>";
 class vektor
 {
-    private $prvni;
-    private $druhy;
+    public $prvni;
+    public $druhy;
     
     public function __construct($a,$b)
     {
@@ -20,15 +20,20 @@ class vektor
     {
         $this->druhy=$a;
         echo $this->druhy;
-        $result='<div class="alert alert-success">Úspěšně vloženo</div>';
     }
     public function vypis()
     {
-        echo "<p>[$this->prvni][$this->druhy]</p>";
+        return " [$this->prvni][$this->druhy] ";
     }
-    public function vzdalenost($a,$b)
+    public function vzdalenost($b)
     {
+    
+    $vysledek=new vektor(0,0);
         
+    $vysledek->prvni=($b->prvni-$this->prvni)*($b->prvni-$this->prvni);
+    $vysledek->druhy=($b->druhy-$this->druhy)*($b->druhy-$this->druhy);
+
+    return sqrt($vysledek->prvni+$vysledek->druhy);
     }
 }
 ?>
