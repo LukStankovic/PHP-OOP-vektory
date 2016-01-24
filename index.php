@@ -2,8 +2,8 @@
 <?php
     require_once 'vektor.php';
 
-    $a=new vektor(0,0);
-    $b=new vektor(0,0);
+    $a=new point(0,0);
+    $b=new point(0,0);
 ?>
 <html lang="cs">
     <head>

@@ -1,6 +1,6 @@
 <?php
 //echo "<p>class</p>";
-class vektor
+class point
 {
     public $prvni;
     public $druhy;
@@ -28,7 +28,7 @@ class vektor
     public function vzdalenost($b)
     {
     
-    $vysledek=new vektor(0,0);
+    $vysledek=new point(0,0);
         
     $vysledek->prvni=($b->prvni-$this->prvni)*($b->prvni-$this->prvni);
     $vysledek->druhy=($b->druhy-$this->druhy)*($b->druhy-$this->druhy);
