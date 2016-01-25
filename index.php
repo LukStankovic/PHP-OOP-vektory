@@ -15,7 +15,7 @@
     </head>
 <body class="container">
 <header>
-    <h1>Vektory</h1>
+    <h1>Body v prostoru</h1>
 </header>    
     <div class="row">
     <form class="form col-md-12" method="post" action="index.php">
