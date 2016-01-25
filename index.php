@@ -8,7 +8,7 @@
 <html lang="cs">
     <head>
     <meta charset="utf-8">
-    <title>Vektory</title> 
+    <title>Body v prostoru</title> 
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script type="text/javascript" href="https://code.jquery.com/jquery-2.1.4.min.js"></script>
