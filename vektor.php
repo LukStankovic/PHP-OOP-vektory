@@ -28,12 +28,17 @@ class point
     public function vzdalenost($b)
     {
     
-    $vysledek=new point(0,0);
+        $vysledek=new point(0,0);
         
-    $vysledek->prvni=($b->prvni-$this->prvni)*($b->prvni-$this->prvni);
-    $vysledek->druhy=($b->druhy-$this->druhy)*($b->druhy-$this->druhy);
+        $vysledek->prvni=($b->prvni-$this->prvni)*($b->prvni-$this->prvni);
+        $vysledek->druhy=($b->druhy-$this->druhy)*($b->druhy-$this->druhy);
 
     return sqrt($vysledek->prvni+$vysledek->druhy);
+    }
+    public function zmena($x,$y)
+    {
+        $this->prvni+=$x;
+        $this->druhy+=$y;
     }
 }
 ?>

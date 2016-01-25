@@ -38,9 +38,24 @@
     </div>
     <?php if(isset($_POST["submit"]))
     {
-    echo "<div class='alert alert-success row col-xs-8 col-md-12'>
+        echo "<div class='alert alert-success row col-xs-8 col-md-12'>
         <strong>Vzdálenost zadaných bodů".$a->vypis()." a ".$b->vypis()."= ".$a->vzdalenost($b)."</strong>
     </div>";
+    
+                       
+        echo "<h2>Změna</h2>";
+        echo "<h3>Před změnou</h3>";
+    
+        echo "<p>A: ".$a->vypis()."</p>";
+        echo "<p>B: ".$b->vypis()."</p>";        
+    
+        echo "<h3>Po změně o +5</h3>";
+    
+        $a->zmena(5,5);
+        $b->zmena(5,5);
+    
+        echo "<p>A: ".$a->vypis()."</p>";
+        echo "<p>B: ".$b->vypis()."</p>"; 
     }
     ?>
 </body>
