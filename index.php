@@ -37,29 +37,29 @@
     </form>
     </div>
     <?php if(isset($_POST["submit"])||(isset($_POST["zmena"])))
-    {
-        echo "<div class='alert alert-success row col-xs-8 col-md-12'>
-        <strong>Vzdálenost zadaných bodů".$a->vypis()." a ".$b->vypis()."= ".$a->vzdalenost($b)."</strong>
-    </div>";
+    { ?>
+        <div class='alert alert-success row col-xs-8 col-md-12'>
+            <strong>Vzdálenost zadaných bodů <?php echo $a->vypis();?> a <?php echo $b->vypis();?> = <?php echo $a->vzdalenost($b);?></strong>
+        </div>
     
                        
-        echo "<h2>Změna</h2>";
-        echo "<h3>Před změnou</h3>";
+        <h2>Změna</h2>
+        <h3>Před změnou</h3>
     
-        echo "<p>A: ".$a->vypis()."</p>";
-        echo "<p>B: ".$b->vypis()."</p>";        
+        <p>A: <?php echo $a->vypis();?></p>
+        <p>B: <?php echo $b->vypis();?></p>
     
-        echo "<h3>Po změně o +5</h3>";
-    
+        <h3>Po změně o +5</h3>
+        <?php 
         $a->zmena(5,5);
         $b->zmena(5,5);
-    
-        echo "<p>A: ".$a->vypis()."</p>";
-        echo "<p>B: ".$b->vypis()."</p>";
+        ?>
+        <p>A: <?php echo $a->vypis();?></p>
+        <p>B: <?php echo $b->vypis();?></p>
+    <?php
     }
-    ?>
-    
-    <?php if(isset($_POST["submit"])||(isset($_POST["zmena"])))
+
+    if(isset($_POST["submit"])||(isset($_POST["zmena"])))
     {
     ?>
     <h2>Posun v objektu pomocí metody</h2>
