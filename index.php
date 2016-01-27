@@ -36,7 +36,7 @@
             </div>
     </form>
     </div>
-    <?php if(isset($_POST["submit"]))
+    <?php if(isset($_POST["submit"])||(isset($_POST["zmena"])))
     {
         echo "<div class='alert alert-success row col-xs-8 col-md-12'>
         <strong>Vzdálenost zadaných bodů".$a->vypis()." a ".$b->vypis()."= ".$a->vzdalenost($b)."</strong>
