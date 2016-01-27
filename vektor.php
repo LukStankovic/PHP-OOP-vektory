@@ -48,5 +48,10 @@ class point
     {
         echo $this->druhy;
     }
+    public function zmena_x($x)
+    {
+        $this->prvni+=$x;
+        $this->druhy+=$y;
+    }
 }
 ?>
