@@ -40,5 +40,13 @@ class point
         $this->prvni+=$x;
         $this->druhy+=$y;
     }
+    public function prvni_vypis()
+    {
+        echo $this->prvni;
+    }
+    public function druhy_vypis()
+    {
+        echo $this->druhy;
+    }
 }
 ?>

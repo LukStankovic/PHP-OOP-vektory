@@ -55,7 +55,33 @@
         $b->zmena(5,5);
     
         echo "<p>A: ".$a->vypis()."</p>";
-        echo "<p>B: ".$b->vypis()."</p>"; 
+        echo "<p>B: ".$b->vypis()."</p>";
+    }
+    ?>   
+    <?php if(isset($_POST["submit"])||(isset($_POST["zmena"])))
+    {
+    echo "<h2>Změna dat v objektu pomocí metody</h2>";
+    
+    echo "<form class='form col-md-12' method='post' action='index.php'>
+            <div class='col-xs-8 col-md-6'>
+                <input type='text' class='form-control' id='A1' name='A1' placeholder='".$a->prvni_vypis()."' value=".if(isset($_POST["zmena"])){$a->prvni($_POST['A1'])}.">
+            </div>
+            <div class='col-xs-8 col-md-6'>
+                <input type='text' class='form-control' id='A2' name='A2' placeholder='".$a->druhy_vypis()."' value=".if(isset($_POST["zmena"])){$a->druhy($_POST['A2'])}.">
+            </div>
+            <div class='col-xs-8 col-md-6'>
+                <input type='text' class='form-control' id='B1' name='B1' placeholder='".$b->prvni_vypis()."' value=".if(isset($_POST["zmena"])){$b->prvni($_POST['B1'])}.">
+            </div>
+            <div class='col-xs-8 col-md-6'>
+                <input type='text' class='form-control' id='B2' name='B2' placeholder='".$b->druhy_vypis()."' value=".if(isset($_POST["zmena"])){$b->druhy($_POST['B2'])}.">
+            </div>
+            <div class='col-xs-8 col-md-6 col-md-offset-10'>
+                    <input id='zmena' name='zmena' type='submit' value='Změnit' class='btn btn-primary'>
+            </div>
+    </form>";
+
+        echo $a->vypis();
+        echo $b->vypis();   
     }
     ?>
 </body>
